@@ -23,6 +23,8 @@
         padding: 2rem 4rem;
         display: grid;
         place-items: center;
+        /* background-color: rgb(226, 226, 238); */
+        background: inherit;
     }
 
     header{
@@ -30,18 +32,26 @@
         max-width: 60rem;
         text-align: center;
         background-color: rgb(185, 85, 197);
-        color:aliceblue;
+        color: white;
         padding: 1.5rem 1rem;
         display: grid;
         gap: 0.7rem;
+        border-radius: 1rem 1rem 0 0;
     }
 
     .container{
         max-width: 38rem;
+       
+        /* background-color: whitesmoke; */
+    }
+
+    .text-wrapper{
         display: grid;
         gap: 2rem;
-        margin-top: 1rem;
-        /* background-color: whitesmoke; */
+        padding-block: 2rem;
+        padding-inline: 1.5rem;
+        background-color: whitesmoke;
+        border-radius: 0 0 1rem 1rem;
     }
 
     #product-link{
@@ -53,6 +63,7 @@
         color: whitesmoke;
         border-radius: 0.5rem;
         font-size: 1.4rem;
+        font-weight: 800;
         place-self: center;
     }
 
@@ -63,32 +74,37 @@
 </style>
 </head>
 <body>
-    <header>
-        <h1>New Order</h1>
-        <p id="currentDateTime"></p>
-    </header>
 
     <div class="container">
-        <p>Good day, I'll like to place an order for:</p>
-        
-        <p>Product: Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-        
-        <p>Description: Nunc varius pellentesque ante arcu justo rhoncus molestie, senectus quisque libero dis quam nulla per
-            netus, aptent
-            felis lorem tincidunt ornare augue. Orci vestibulum libero bibendum vehicula senectus et faucibus accumsan, euismod
-            elementum aliquet rhoncus urna lobortis blandit, ridiculus porta curae adipiscing dis iaculis purus. Convallis nunc
-            congue arcu vivamus tempus aliquam libero erat rutrum interdum sapien parturient, ridiculus blandit dictumst dolor
-            facilisi semper bibendum penatibus cum tellus aenean.</p>
-        
-        <p>Brand: Lorem ipsum dolor</p>
-        
-        <p>Price(&#8358;): 5,000</p>
-        
-        <a href="#" id="product-link" target="_blank">Link to product</a>
+
+        <header>
+            <h1>New Order</h1>
+            <p id="currentDateTime"></p>
+        </header>
+
+        <div class="text-wrapper">
+            <p>Good day, I'll like to place an order for:</p>
+            
+            <p><b>Product:</b> Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+            
+            <p><b>Description:</b> Nunc varius pellentesque ante arcu justo rhoncus molestie, senectus quisque libero dis quam nulla per
+                netus, aptent
+                felis lorem tincidunt ornare augue. Orci vestibulum libero bibendum vehicula senectus et faucibus accumsan, euismod
+                elementum aliquet rhoncus urna lobortis blandit, ridiculus porta curae adipiscing dis iaculis purus. Convallis nunc
+                congue arcu vivamus tempus aliquam libero erat rutrum interdum sapien parturient, ridiculus blandit dictumst dolor
+                facilisi semper bibendum penatibus cum tellus aenean.</p>
+            
+            <p><b>Brand:</b> Lorem ipsum dolor</p>
+            
+            <p><b>Price(&#8358;):</b> 5,000</p>
+            
+            <a href="#" id="product-link" target="_blank">Link to product</a>
+        </div>
+       
     </div>
     
 
-
+<!-- script for the date and time -->
 <script>
     function updateDateTime() {
         const currentDateTime = new Date();
