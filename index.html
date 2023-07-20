@@ -1,0 +1,113 @@
+<!-- boilerplate code -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Template</title>
+
+<style type="text/css">
+
+    *,*::before, *::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: sans-serif;
+        padding: 2rem 4rem;
+        display: grid;
+        place-items: center;
+    }
+
+    header{
+        width: 100%;
+        max-width: 60rem;
+        text-align: center;
+        background-color: rgb(185, 85, 197);
+        color:aliceblue;
+        padding: 1.5rem 1rem;
+        display: grid;
+        gap: 0.7rem;
+    }
+
+    .container{
+        max-width: 38rem;
+        display: grid;
+        gap: 2rem;
+        margin-top: 1rem;
+        /* background-color: whitesmoke; */
+    }
+
+    #product-link{
+        width: 20rem;
+        padding: 1rem;
+        background-color: rgb(88, 113, 239);
+        text-align: center;
+        text-decoration: none;
+        color: whitesmoke;
+        border-radius: 0.5rem;
+        font-size: 1.4rem;
+        place-self: center;
+    }
+
+    #product-link:hover{
+        background-color: rgb(64, 83, 182);
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>New Order</h1>
+        <p id="currentDateTime"></p>
+    </header>
+
+    <div class="container">
+        <p>Good day, I'll like to place an order for:</p>
+        
+        <p>Product: Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+        
+        <p>Description: Nunc varius pellentesque ante arcu justo rhoncus molestie, senectus quisque libero dis quam nulla per
+            netus, aptent
+            felis lorem tincidunt ornare augue. Orci vestibulum libero bibendum vehicula senectus et faucibus accumsan, euismod
+            elementum aliquet rhoncus urna lobortis blandit, ridiculus porta curae adipiscing dis iaculis purus. Convallis nunc
+            congue arcu vivamus tempus aliquam libero erat rutrum interdum sapien parturient, ridiculus blandit dictumst dolor
+            facilisi semper bibendum penatibus cum tellus aenean.</p>
+        
+        <p>Brand: Lorem ipsum dolor</p>
+        
+        <p>Price(&#8358;): 5,000</p>
+        
+        <a href="#" id="product-link" target="_blank">Link to product</a>
+    </div>
+    
+
+
+<script>
+    function updateDateTime() {
+        const currentDateTime = new Date();
+        const formattedDateTime = currentDateTime.toLocaleString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+        });
+
+        document.getElementById("currentDateTime").textContent = formattedDateTime;
+    }
+
+    // Update the date and time every second (1000 milliseconds)
+    setInterval(updateDateTime, 1000);
+</script>
+
+    
+</body>
+</html>
